@@ -74,7 +74,7 @@ def menu():
 
 
 create_tables()
-flag = 1
+flag = 0
 while flag:
     menu()
 
