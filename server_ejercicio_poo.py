@@ -10,7 +10,7 @@ def insert_ejercicio(ID, ejercicio, repeticiones, tiempo, peso, fortalece, serie
     db.commit()
     return True
 
-def update_book(ID, ejercicio, repeticiones, tiempo, peso, fortalece, serie, dificultad):
+def update_ejercicio(ID, ejercicio, repeticiones, tiempo, peso, fortalece, serie, dificultad):
     db = get_db()
     cursor = db.cursor()
     statement = "UPDATE fit SET ejercicio = ?, repeticiones = ?, tiempo= ?, peso= ?, fortalece= ?, number_pages= ?, press= ? WHERE ID = ?"
@@ -53,7 +53,7 @@ def get_ejercicio():
     cursor.execute(query)
     ejercicio_list = cursor.fetchall()
     list_of_ejercicios=[]
-    for ejercicio in book_ejerciciejercicioo:
+    for ejercicio in list_of_ejercicios:
         ID = ejercicio[0]
         ejercicio = ejercicio[1]
         repeticiones = ejercicio[2]

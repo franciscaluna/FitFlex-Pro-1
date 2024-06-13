@@ -99,7 +99,7 @@ while flag:
             print()
 
     elif opcion == 2:
-        ID = int(input('ingrese el ID del ejercicio a eliminar'))
+        ID = int(input('ingrese el ID del ejercicio a eliminar: '))
         result = delete_ejercicio(ID)
         if result == True:
             print('ejercicio eliminado')
@@ -110,7 +110,7 @@ while flag:
             print()
 
     elif opcion == 3:
-        ID = int(input('ingrese el ID del ejercicio a buscar'))
+        ID = int(input('ingrese el ID del ejercicio a buscar: '))
         result = get_by_id(ID)  # devuelve una tupla con el registro
         print(result)
         print()

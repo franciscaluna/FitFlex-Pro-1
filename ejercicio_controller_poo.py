@@ -7,12 +7,12 @@ app = Flask(__name__)
 
 @app.route('/ejercicio', methods=["GET"])
 def get_ejercicios():
-    ejercicios = Untitled.get_books()
+    ejercicios = server_ejercicio_poo.get_ejercicios()
     ejercicios_list=[]
     for ejercicio in ejercicios:
         elem = ejercicios.serialize()
         ejercicios_list.append(elem)
-    return jsonify(books_list)
+    return jsonify(ejercicios_list)
 
 @app.route("/ejercicio/create", methods=["POST"])
 def insert_ejercicio():
@@ -46,7 +46,7 @@ def update_ejercicio():
 
 @app.route("/ejercicio/eliminate/<ID>", methods=["DELETE"])
 def delete_ejercicio(ID):
-    result = server_ejercicio_poo.delete_book(ID)
+    result = server_ejercicio_poo.delete_ejercicio(ID)
     return jsonify(result)
 
 
